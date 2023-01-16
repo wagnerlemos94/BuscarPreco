@@ -68,7 +68,7 @@ public class OkapiApiController{
 
         Unirest.setTimeouts(0, 0);
         HttpResponse<String> response = Unirest.get("https://api.productdata.volkswagenag.com/v3/catalog/pt/types")
-                .header("Authorization", "Bearer App61OWGVu10ITTxHo00JdoV3GJos18m")
+                .header("Authorization", token)
                 .asString();
 
         return response.getBody();
